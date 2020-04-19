@@ -1,14 +1,12 @@
-node{
-   stages{
+node{   
      Stage('SCM checkout'){
-        steps{
-           git 'https://github.com/sanbar-web/maven'
-        }          
-       }
-    Stage('Compile package'){
-       steps{
-          bat 'mvn package'
-       }      
-    }
-   }  
-  }
+        git 'https://github.com/sanbar-web/maven'
+     }
+   Stage('Compile package'){
+      sh 'mvn package'
+   }
+}
+                
+         
+       
+     
