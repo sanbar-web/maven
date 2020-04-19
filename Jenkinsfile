@@ -6,7 +6,3 @@ node{
       sh 'mvn package'
      }
 }
-                
-         
-       
-     
