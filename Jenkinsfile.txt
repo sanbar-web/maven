@@ -1,10 +1,9 @@
-pipeline { 
-    agent any  
-    stages { 
-        stage('Build') { 
-            steps { 
-               echo 'This is a minimal pipeline.' 
-            }
-        }
+node{
+   Stage('SCM checkout){
+      git 'https://github.com/sanbar-web/maven'
+      }
+    Stage('Compile package'){
+      sh 'mvn package
     }
-}
+      
+  }
